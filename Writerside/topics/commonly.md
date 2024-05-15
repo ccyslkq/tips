@@ -6,7 +6,7 @@
 - 45测服 : `ssh yang.lingshu@10.21.200.45 -p22 -i C:\Users\yang.lingshu\.ssh\id_rsa`
 
 
-## 常用SQL {id="sql_1"}
+## 常用SQL
 ### 正在执行
 ```SQL
 select * from information_schema.`PROCESSLIST` where info is not null order by time desc \G;
