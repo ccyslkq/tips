@@ -1,10 +1,9 @@
 # 常用命令
 
 ## 服务器连接
-- Jumpserver : `ssh yang.lingshu@10.21.200.56 -p2222 -i C:\Users\yang.lingshu\.ssh\id_rsa`
-- 华为云 : `ssh yang.lingshu@121.36.169.229 -p2222 -i C:\Users\yang.lingshu\.ssh\id_rsa`
-- 45测服 : `ssh yang.lingshu@10.21.200.45 -p22 -i C:\Users\yang.lingshu\.ssh\id_rsa`
-
+```Bash
+ssh username@host -pport -i .\id_rsa
+```
 
 ## 常用SQL
 ### 正在执行
@@ -27,7 +26,7 @@ CREATE INDEX idx_date_mid ON rank_for_calculate (`date`,`mid`);
 改动mysql配置my.cnf后，如果不想重启进程，可以set global xxx手动修改当前进程配置。
 
 ## mysqldump
-```Shell
+```Bash
 mysqldump --skip-lock-tables=TRUE --add-locks=FALSE --no-create-info=TRUE --no-create-db=TRUE --lock-tables=FALSE -h10.21.200.32 -P3306 -um_reader -preaderqweasd --databases industry --tables industry_solidify_item --where='mid=3004 and date >= 20220901' | mysql -h10.21.200.110 -uindustry_test -pindustry20210719 industry
 ```
 
@@ -62,12 +61,12 @@ SET session rocksdb_bulk_load=0;
 
 ## 检查系统cron服务状态
 ### systemd
-```Shell
+```Bash
 sudo systemctl status crond
 sudo systemctl restart crond
 ```
 ### 其他
-```Shell
+```Bash
 sudo service crond status
 sudo service crond restart
 ```
@@ -75,12 +74,12 @@ sudo service crond restart
 ## linux软链接
 - 创建软链接： `ln -s [源文件/目录] [目标文件/目录]`  
 - 修改：`ln -snf [源] [目标]`  
-```Shell
+```
 ln -s /var/resource /var/new_dir    # /var/new_dir  ->  /var/resource
 ```
 
 - 删除 `unlink [目标]`
-```Shell
+```Bash
 unlink /var/new_dir
 ```
 - 不建议使用`rm`命令删除，`rm -rf /var/new_dir/` 会导致源文件（目录）`/var/resource/` 被完全删除
