@@ -7,4 +7,5 @@
                  start-page="common.md">
 
     <toc-element topic="common.md"/>
+    <toc-element topic="tips.md"/>
 </instance-profile>
