@@ -17,7 +17,14 @@ SELECT group_concat(concat("kill ", ID) SEPARATOR ';') FROM information_schema.`
 ```
 
 ### 输出SQL换行
-`nopager`
+```SQL
+nopager -- 禁用分页输出
+
+-- 使用less或more作为分页查看程序
+pager less
+pager more
+```
+
 ### tokudb热加索引
 ```SQL
 SET tokudb_create_index_online=on;
