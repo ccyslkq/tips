@@ -72,8 +72,8 @@ sudo service crond restart
 ```
 
 ## linux软链接
-- 创建软链接： `ln -s [源文件/目录] [目标文件/目录]`  
-- 修改：`ln -snf [源] [目标]`  
+- 创建软链接： `ln -s [源文件/目录] [目标文件/目录]`
+- 修改：`ln -snf [源] [目标]`
 ```
 ln -s /var/resource /var/new_dir    # /var/new_dir  ->  /var/resource
 ```
