@@ -92,5 +92,3 @@ unlink /var/new_dir
 - 不建议使用`rm`命令删除，`rm -rf /var/new_dir/` 会导致源文件（目录）`/var/resource/` 被完全删除
 - 非要用 `rm` 删除的话  `rm /var/new_dir`   （不要使用r,f  参数，也不要在末尾加斜杠。因为软链接不是目录）
 > [如何正确的删除软链接](https://fantiq.github.io/2017/07/06/%E5%A6%82%E4%BD%95%E6%AD%A3%E7%A1%AE%E7%9A%84%E5%88%A0%E9%99%A4%E8%BD%AF%E8%BF%9E%E6%8E%A5/)
-  
-
